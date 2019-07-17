@@ -1,0 +1,18 @@
+# Output products list for <datafifo>
+_xmsgs/pn_parser.xmsgs
+datafifo/doc/fifo_generator_ds317.pdf
+datafifo/doc/fifo_generator_ug175.pdf
+datafifo/doc/fifo_generator_v8_1_vinfo.html
+datafifo/doc/xapp992.pdf
+datafifo.asy
+datafifo.gise
+datafifo.ngc
+datafifo.sym
+datafifo.v
+datafifo.veo
+datafifo.xco
+datafifo.xise
+datafifo_flist.txt
+datafifo_xmdf.tcl
+fifo_generator_readme.txt
+fifo_generator_ug175.pdf
