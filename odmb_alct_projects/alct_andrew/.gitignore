@@ -79,7 +79,7 @@ iseconfig
 *.twr
 *.twx
 *.txt
-*.ucf
+#*.ucf
 *.unroutes
 *.ut
 *.wcfg
