@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="odmb_ucsb" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct_test|source|odmb_ucsb_v2.vhd/ALCT_OTMB_DATA_GEN_PM - alct_otmb_data_gen - alct_otmb_data_gen_architecture</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct_test|source|odmb_ucsb_v2.vhd/DCFEB_V6_PM - dcfeb_v6 - dcfeb_v6_arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct_test|source|odmb_ucsb_v2.vhd/GIGALINK_DDU_PM - GIGALINK_DDU - GIGALINK_DDU_ARCH</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct_test|source|odmb_ucsb_v2.vhd/GIGALINK_PC_PM - GIGALINK_PC - GIGALINK_PC_ARCH</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct_test|source|odmb_ucsb_v2.vhd/MBC - ODMB_CTRL - ODMB_CTRL_arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct_test|source|odmb_ucsb_v2.vhd/MBV - ODMB_VME - ODMB_VME_architecture</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct_test|source|odmb_ucsb_v2.vhd/PULSE_BADDCFEB_LONG - NPULSE2SAME - NPULSE2SAME_Arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct_test|source|odmb_ucsb_v2.vhd/gtx_alct_2link_test_i - gtx_alct_link_test_top</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/ALCT_OTMB_DATA_GEN_PM - alct_otmb_data_gen - alct_otmb_data_gen_architecture</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/BAD_RX_CNT - COUNT_WINDOW - COUNT_WINDOW_ARCH</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/BPI_ctrl_i - BPI_ctrl</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/DCFEB_V6_PM - dcfeb_v6 - dcfeb_v6_arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/DMB_RX_PM - dmb_receiver</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/GIGALINK_DDU_PM - GIGALINK_DDU - GIGALINK_DDU_ARCH</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/GIGALINK_PC_PM - GIGALINK_PC - GIGALINK_PC_ARCH</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/L1ARESETPULSE - RESET_FIFO - RESET_FIFO_Arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/LVMB_MUX_PM - LVMB_MUX - LVMB_MUX_ARCH</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/MBC - ODMB_CTRL - ODMB_CTRL_arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/MBV - ODMB_VME - ODMB_VME_architecture</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/MBV - ODMB_VME - ODMB_VME_architecture/COMMAND_PM - COMMAND_MODULE - COMMAND_MODULE_Arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/MBV - ODMB_VME - ODMB_VME_architecture/DEV0_TESTCTRL - TESTCTRL - TESTCTRL_Arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/MBV - ODMB_VME - ODMB_VME_architecture/DEV2_ODMBJTAG - ODMBJTAG - ODMBJTAG_Arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/MBV - ODMB_VME - ODMB_VME_architecture/DEV3_VMEMON - VMEMON - VMEMON_Arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/MBV - ODMB_VME - ODMB_VME_architecture/DEV4_VMECONFREGS - VMECONFREGS - VMECONFREGS_Arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/MBV - ODMB_VME - ODMB_VME_architecture/DEV5_TESTFIFOS - TESTFIFOS - TESTFIFOS_Arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/MBV - ODMB_VME - ODMB_VME_architecture/DEV6_BPI_PORT - BPI_PORT - BPI_PORT_Arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/MBV - ODMB_VME - ODMB_VME_architecture/DEV8_LVDBMON - LVDBMON - LVDBMON_Arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/MBV - ODMB_VME - ODMB_VME_architecture/DEV9_SYSTEST - SYSTEM_TEST - SYSTEM_TEST_Arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/MBV - ODMB_VME - ODMB_VME_architecture/PULSE_LED - NPULSE2SAME - NPULSE2SAME_Arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/PULSE_BADDCFEB_LONG - NPULSE2SAME - NPULSE2SAME_Arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/PULSE_DCFEB_INITJTAG - NPULSE2FAST - NPULSE2FAST_Arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/PULSE_ODMB_INITJTAG - NPULSE2FAST - NPULSE2FAST_Arch</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/bpi_interface_i - bpi_interface</ClosedNode>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/gtx_alct_2link_test_i - gtx_alct_link_test_top</ClosedNode>
+         <ClosedNode>/Unassigned User Library Modules</ClosedNode>
+         <ClosedNode>/dmb_receiver |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|dmb_receiver|dmb_receiver.v</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH (/home/hualin/ODMB/firmware/odmb_ucsb_v2_alct_test/source/odmb_ucsb_v2.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000329000000020000000000000000000000000200000064ffffffff000000810000000300000002000003290000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH (/home/hualin/ODMB/firmware/odmb_ucsb_v2_alct_test/source/odmb_ucsb_v2.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>CORE Generator</ClosedNode>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Generate Programming File</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >7</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000220000000010000000100000000000000000000000064ffffffff000000810000000000000001000002200000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Generate Programming File</CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>gtx_alct_link_test_top.v</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >34</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000390000000040101000100000000000000000000000064ffffffff000000810000000000000004000000f000000001000000000000011b0000000100000000000000840000000100000000000001010000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>gtx_alct_link_test_top.v</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>hdlmacro</ClosedNode>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000128000000010001000100000000000000000000000064ffffffff000000810000000000000001000001280000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>hdlmacro</CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff0000000000000002000000e20000006b01000000060100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000022f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000022f0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000022f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000022f0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_NGC" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000022f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000022f0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>CORE Generator</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000022f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000022f0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+</Project>

@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;ALCT_OTMB_DATA_GEN_PM/PULSE_RESET/pulse_cnt&lt;10&gt;&quot; TNM_NET = D_CLK&gt; was not distributed to the output pin TXOUTCLK of block gtx_alct_2link_test_i/gtx_alct_link_test_i/gtx0_gtx_alct_link_test_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="137" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;qpll_clk160mhz_n&quot; TNM_NET = qpll_clk160mhz_n;&gt; [source/odmb_pinout_v2.ucf(534)]</arg>: No appropriate instances for the TNM constraint are driven by &quot;<arg fmt="%s" index="2">qpll_clk160MHz_n</arg>&quot;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="56" delta="old" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_qpll_clk160mhz_n = PERIOD &quot;qpll_clk160mhz_n&quot; 6.25 ns HIGH 50%;&gt; [source/odmb_pinout_v2.ucf(535)]</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TNM&apos; or &apos;TimeGrp&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">qpll_clk160mhz_n</arg>&apos;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="137" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;qpll_clk160mhz_p&quot; TNM_NET = qpll_clk160mhz_p;&gt; [source/odmb_pinout_v2.ucf(536)]</arg>: No appropriate instances for the TNM constraint are driven by &quot;<arg fmt="%s" index="2">qpll_clk160MHz_p</arg>&quot;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="56" delta="old" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_qpll_clk160mhz_p = PERIOD &quot;qpll_clk160mhz_p&quot; 6.25 ns HIGH 50%;&gt; [source/odmb_pinout_v2.ucf(537)]</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TNM&apos; or &apos;TimeGrp&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">qpll_clk160mhz_p</arg>&apos;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >TNM : D_CLK was distributed to a DCM but new TNM constraints were not derived. This TNM is used in the following user groups or specifications:
+&lt;TIMESPEC TS_J_TO_D = FROM &quot;J_CLK&quot; TO &quot;D_CLK&quot; TIG;&gt;
+&lt;TIMESPEC TS_D_TO_J = FROM &quot;D_CLK&quot; TO &quot;J_CLK&quot; TIG;&gt;
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">qpll_clk40mhz_n</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_qpll_clk40mhz_n</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCM_ADV</arg> instance <arg fmt="%s" index="5">MMCM_BASE_PLL1</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCM_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT3</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_pll_clk5 = PERIOD &quot;pll_clk5&quot; TS_qpll_clk40mhz_n / 0.125 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">qpll_clk40mhz_n</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_qpll_clk40mhz_n</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCM_ADV</arg> instance <arg fmt="%s" index="5">MMCM_BASE_PLL1</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCM_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT1</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_pll_clk40 = PERIOD &quot;pll_clk40&quot; TS_qpll_clk40mhz_n HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">qpll_clk40mhz_n</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_qpll_clk40mhz_n</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCM_ADV</arg> instance <arg fmt="%s" index="5">MMCM_BASE_PLL1</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCM_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT4</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_pll_clk80 = PERIOD &quot;pll_clk80&quot; TS_qpll_clk40mhz_n / 2 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">qpll_clk40mhz_p</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_qpll_clk40mhz_p</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCM_ADV</arg> instance <arg fmt="%s" index="5">MMCM_BASE_PLL1</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCM_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT3</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_pll_clk5_0 = PERIOD &quot;pll_clk5_0&quot; TS_qpll_clk40mhz_p / 0.125 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">qpll_clk40mhz_p</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_qpll_clk40mhz_p</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCM_ADV</arg> instance <arg fmt="%s" index="5">MMCM_BASE_PLL1</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCM_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT1</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_pll_clk40_0 = PERIOD &quot;pll_clk40_0&quot; TS_qpll_clk40mhz_p HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">qpll_clk40mhz_p</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_qpll_clk40mhz_p</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCM_ADV</arg> instance <arg fmt="%s" index="5">MMCM_BASE_PLL1</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCM_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT4</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_pll_clk80_0 = PERIOD &quot;pll_clk80_0&quot; TS_qpll_clk40mhz_p / 2 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="191" delta="old" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">qpll_clk160mhz_n</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMS and cannot be actively used by the referencing <arg fmt="%s" index="3">Period</arg> constraint &apos;<arg fmt="%s" index="4">TS_qpll_clk160mhz_n</arg>&apos;. If clock manager blocks are directly or indirectly driven, a new TNM constraint will not be derived even though the referencing constraint is a PERIOD constraint unless an output of the clock manager drives flip-flops, latches or RAMs. This TNM is used in the following user PERIOD specification:
+<arg fmt="%s" index="5">&lt;TIMESPEC TS_qpll_clk160mhz_n = PERIOD &quot;qpll_clk160mhz_n&quot; 6.25 ns HIGH 50%;&gt; [source/odmb_pinout_v2.ucf(535)]
+</arg></msg>
+
+<msg type="warning" file="ConstraintSystem" num="197" delta="old" >The following specification is invalid because the referenced TNM constraint was removed:
+<arg fmt="%s" index="1">&lt;TIMESPEC TS_qpll_clk160mhz_n = PERIOD &quot;qpll_clk160mhz_n&quot; 6.25 ns HIGH 50%;&gt; [source/odmb_pinout_v2.ucf(535)]</arg>
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="191" delta="old" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">qpll_clk160mhz_p</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMS and cannot be actively used by the referencing <arg fmt="%s" index="3">Period</arg> constraint &apos;<arg fmt="%s" index="4">TS_qpll_clk160mhz_p</arg>&apos;. If clock manager blocks are directly or indirectly driven, a new TNM constraint will not be derived even though the referencing constraint is a PERIOD constraint unless an output of the clock manager drives flip-flops, latches or RAMs. This TNM is used in the following user PERIOD specification:
+<arg fmt="%s" index="5">&lt;TIMESPEC TS_qpll_clk160mhz_p = PERIOD &quot;qpll_clk160mhz_p&quot; 6.25 ns HIGH 50%;&gt; [source/odmb_pinout_v2.ucf(537)]
+</arg></msg>
+
+<msg type="warning" file="ConstraintSystem" num="197" delta="old" >The following specification is invalid because the referenced TNM constraint was removed:
+<arg fmt="%s" index="1">&lt;TIMESPEC TS_qpll_clk160mhz_p = PERIOD &quot;qpll_clk160mhz_p&quot; 6.25 ns HIGH 50%;&gt; [source/odmb_pinout_v2.ucf(537)]</arg>
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">FDRESET</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">NFEB_CNT[7].CRC_CNT/FDDIN2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">NFEB_CNT[6].CRC_CNT/FDDIN2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">NFEB_CNT[5].CRC_CNT/FDDIN2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">NFEB_CNT[4].CRC_CNT/FDDIN2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">NFEB_CNT[3].CRC_CNT/FDDIN2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">NFEB_CNT[2].CRC_CNT/FDDIN2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">NFEB_CNT[1].CRC_CNT/FDDIN2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">GEN_DCFEB[6].DCFEB_V6_PM/PMAP_dcfeb_data_gen/PULSE_RESET/PULSE1_PM/FD2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">GEN_DCFEB[5].DCFEB_V6_PM/PMAP_dcfeb_data_gen/PULSE_RESET/PULSE1_PM/FD2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">GEN_DCFEB[4].DCFEB_V6_PM/PMAP_dcfeb_data_gen/PULSE_RESET/PULSE1_PM/FD2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">GEN_DCFEB[3].DCFEB_V6_PM/PMAP_dcfeb_data_gen/PULSE_RESET/PULSE1_PM/FD2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">GEN_DCFEB[2].DCFEB_V6_PM/PMAP_dcfeb_data_gen/PULSE_RESET/PULSE1_PM/FD2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">GEN_DCFEB[1].DCFEB_V6_PM/PMAP_dcfeb_data_gen/PULSE_RESET/PULSE1_PM/FD2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">NFEB_CNT[7].BAD_RX_CNT/FDDIN</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">NFEB_CNT[6].BAD_RX_CNT/FDDIN</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">NFEB_CNT[5].BAD_RX_CNT/FDDIN</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">NFEB_CNT[4].BAD_RX_CNT/FDDIN</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">NFEB_CNT[3].BAD_RX_CNT/FDDIN</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">NFEB_CNT[2].BAD_RX_CNT/FDDIN</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">NFEB_CNT[1].BAD_RX_CNT/FDDIN</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">GEN_BAD_DCFEB[1].PULSE_BADDCFEB_LONG/PULSE1_PM/FD1</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">GEN_BAD_DCFEB[2].PULSE_BADDCFEB_LONG/PULSE1_PM/FD1</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">GEN_BAD_DCFEB[3].PULSE_BADDCFEB_LONG/PULSE1_PM/FD1</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">GEN_BAD_DCFEB[4].PULSE_BADDCFEB_LONG/PULSE1_PM/FD1</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">GEN_BAD_DCFEB[5].PULSE_BADDCFEB_LONG/PULSE1_PM/FD1</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">GEN_BAD_DCFEB[6].PULSE_BADDCFEB_LONG/PULSE1_PM/FD1</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">GEN_BAD_DCFEB[7].PULSE_BADDCFEB_LONG/PULSE1_PM/FD1</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">GEN_DCFEB[7].DCFEB_V6_PM/PMAP_dcfeb_data_gen/l1a_cnt_h_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">GEN_DCFEB[7].DCFEB_V6_PM/PMAP_dcfeb_data_gen/l1a_cnt_l_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">GEN_DCFEB[6].DCFEB_V6_PM/PMAP_dcfeb_data_gen/l1a_cnt_l_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">GEN_DCFEB[6].DCFEB_V6_PM/PMAP_dcfeb_data_gen/l1a_cnt_h_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">GEN_DCFEB[5].DCFEB_V6_PM/PMAP_dcfeb_data_gen/l1a_cnt_l_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">GEN_DCFEB[5].DCFEB_V6_PM/PMAP_dcfeb_data_gen/l1a_cnt_h_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">GEN_DCFEB[4].DCFEB_V6_PM/PMAP_dcfeb_data_gen/l1a_cnt_l_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">GEN_DCFEB[4].DCFEB_V6_PM/PMAP_dcfeb_data_gen/l1a_cnt_h_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">GEN_DCFEB[3].DCFEB_V6_PM/PMAP_dcfeb_data_gen/l1a_cnt_l_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">GEN_DCFEB[3].DCFEB_V6_PM/PMAP_dcfeb_data_gen/l1a_cnt_h_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">GEN_DCFEB[2].DCFEB_V6_PM/PMAP_dcfeb_data_gen/l1a_cnt_l_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">GEN_DCFEB[2].DCFEB_V6_PM/PMAP_dcfeb_data_gen/l1a_cnt_h_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">GEN_DCFEB[1].DCFEB_V6_PM/PMAP_dcfeb_data_gen/l1a_cnt_l_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">GEN_DCFEB[1].DCFEB_V6_PM/PMAP_dcfeb_data_gen/l1a_cnt_h_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/PULSE_LED/PULSE1_PM/FD1</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV1_CFEBJTAG/STROBE_PULSE/FD4</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV0_TESTCTRL/GEN_TC_FIFO[2].TC_FIFO/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV0_TESTCTRL/GEN_TC_FIFO[1].TC_FIFO/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV0_TESTCTRL/GEN_TC_FIFO[0].TC_FIFO/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV0_TESTCTRL/GEN_TC_FIFO[3].TC_FIFO/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV5_TESTFIFOS/ALCT_FIFO/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV5_TESTFIFOS/OTMB_FIFO/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV5_TESTFIFOS/PC_RX_FIFO/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV5_TESTFIFOS/DDU_RX_FIFO/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV5_TESTFIFOS/GEN_TFF_RST[7].PULSE_RESET/INIT_RST</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV5_TESTFIFOS/GEN_TFF_RST[6].PULSE_RESET/INIT_RST</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV5_TESTFIFOS/GEN_TFF_RST[5].PULSE_RESET/INIT_RST</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV5_TESTFIFOS/GEN_TFF_RST[4].PULSE_RESET/INIT_RST</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV5_TESTFIFOS/GEN_TFF_RST[3].PULSE_RESET/INIT_RST</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV5_TESTFIFOS/GEN_TFF_RST[2].PULSE_RESET/INIT_RST</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV5_TESTFIFOS/GEN_TFF_RST[1].PULSE_RESET/INIT_RST</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV5_TESTFIFOS/HDR_FIFO_CASCADE/FIFO_M_NFIFO/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV5_TESTFIFOS/HDR_FIFO_CASCADE/FIFO_M_1/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV5_TESTFIFOS/HDR_FIFO_CASCADE/GEN_FIFO_M[3].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV5_TESTFIFOS/HDR_FIFO_CASCADE/GEN_FIFO_M[2].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV5_TESTFIFOS/DDU_TX_FIFO_CASCADE/FIFO_M_NFIFO/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV5_TESTFIFOS/DDU_TX_FIFO_CASCADE/FIFO_M_1/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV5_TESTFIFOS/DDU_TX_FIFO_CASCADE/GEN_FIFO_M[3].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV5_TESTFIFOS/DDU_TX_FIFO_CASCADE/GEN_FIFO_M[2].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV5_TESTFIFOS/PC_TX_FIFO_CASCADE/FIFO_M_NFIFO/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV5_TESTFIFOS/PC_TX_FIFO_CASCADE/FIFO_M_1/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV5_TESTFIFOS/PC_TX_FIFO_CASCADE/GEN_FIFO_M[3].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBV/DEV5_TESTFIFOS/PC_TX_FIFO_CASCADE/GEN_FIFO_M[2].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV5_TESTFIFOS/GEN_TFF_RST[7].PULSE_RESET/DS_RST/GEN_DIN[50].FD_DIN</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV5_TESTFIFOS/GEN_TFF_RST[6].PULSE_RESET/DS_RST/GEN_DIN[50].FD_DIN</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV5_TESTFIFOS/GEN_TFF_RST[5].PULSE_RESET/DS_RST/GEN_DIN[50].FD_DIN</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV5_TESTFIFOS/GEN_TFF_RST[4].PULSE_RESET/DS_RST/GEN_DIN[50].FD_DIN</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV5_TESTFIFOS/GEN_TFF_RST[3].PULSE_RESET/DS_RST/GEN_DIN[50].FD_DIN</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV5_TESTFIFOS/GEN_TFF_RST[2].PULSE_RESET/DS_RST/GEN_DIN[50].FD_DIN</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV5_TESTFIFOS/GEN_TFF_RST[1].PULSE_RESET/DS_RST/GEN_DIN[50].FD_DIN</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV6_BPI_PORT/FD_CONST_UL_INIT</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV6_BPI_PORT/FD_CFG_UL_INIT</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">MBV/DEV9_SYSTEST/PRBSERR_CNT/FDDIN2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/CAFIFO_PM/GEN_L1ACNT_DAV[1].L1ACNT_DAV_FIFO/bl.fifo_18_inst_bl_1.fifo_18_bl_1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/CAFIFO_PM/GEN_L1ACNT_DAV[2].L1ACNT_DAV_FIFO/bl.fifo_18_inst_bl_1.fifo_18_bl_1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/CAFIFO_PM/GEN_L1ACNT_DAV[3].L1ACNT_DAV_FIFO/bl.fifo_18_inst_bl_1.fifo_18_bl_1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/CAFIFO_PM/GEN_L1ACNT_DAV[4].L1ACNT_DAV_FIFO/bl.fifo_18_inst_bl_1.fifo_18_bl_1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/CAFIFO_PM/GEN_L1ACNT_DAV[5].L1ACNT_DAV_FIFO/bl.fifo_18_inst_bl_1.fifo_18_bl_1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/CAFIFO_PM/GEN_L1ACNT_DAV[6].L1ACNT_DAV_FIFO/bl.fifo_18_inst_bl_1.fifo_18_bl_1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/CAFIFO_PM/GEN_L1ACNT_DAV[7].L1ACNT_DAV_FIFO/bl.fifo_18_inst_bl_1.fifo_18_bl_1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/CAFIFO_PM/GEN_L1ACNT_DAV[8].L1ACNT_DAV_FIFO/bl.fifo_18_inst_bl_1.fifo_18_bl_1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/CAFIFO_PM/GEN_L1ACNT_DAV[9].L1ACNT_DAV_FIFO/bl.fifo_18_inst_bl_1.fifo_18_bl_1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/PCFIFO_PM/PC_FIFO_CASCADE/FIFO_M_1/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/PCFIFO_PM/PC_FIFO_CASCADE/FIFO_M_NFIFO/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/PCFIFO_PM/PC_FIFO_CASCADE/GEN_FIFO_M[15].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/PCFIFO_PM/PC_FIFO_CASCADE/GEN_FIFO_M[14].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/PCFIFO_PM/PC_FIFO_CASCADE/GEN_FIFO_M[13].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/PCFIFO_PM/PC_FIFO_CASCADE/GEN_FIFO_M[12].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/PCFIFO_PM/PC_FIFO_CASCADE/GEN_FIFO_M[11].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/PCFIFO_PM/PC_FIFO_CASCADE/GEN_FIFO_M[10].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/PCFIFO_PM/PC_FIFO_CASCADE/GEN_FIFO_M[9].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/PCFIFO_PM/PC_FIFO_CASCADE/GEN_FIFO_M[8].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/PCFIFO_PM/PC_FIFO_CASCADE/GEN_FIFO_M[7].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/PCFIFO_PM/PC_FIFO_CASCADE/GEN_FIFO_M[6].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/PCFIFO_PM/PC_FIFO_CASCADE/GEN_FIFO_M[5].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/PCFIFO_PM/PC_FIFO_CASCADE/GEN_FIFO_M[4].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/PCFIFO_PM/PC_FIFO_CASCADE/GEN_FIFO_M[3].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">MBC/PCFIFO_PM/PC_FIFO_CASCADE/GEN_FIFO_M[2].FIFO_MOD/bl.fifo_36_inst_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">ALCT_OTMB_DATA_GEN_PM/alct_l1a_cnt_l_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">ALCT_OTMB_DATA_GEN_PM/alct_l1a_cnt_h_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">ALCT_OTMB_DATA_GEN_PM/otmb_l1a_cnt_l_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">ALCT_OTMB_DATA_GEN_PM/otmb_l1a_cnt_h_fifo/bl.fifo_18_inst_bl.fifo_18_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO18E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">ALCT_OTMB_DATA_GEN_PM/PULSE_RESET/PULSE1_PM/FD2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">BPI_ctrl_i/BPI_CMD_FIFO_i/fifo_36_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">BPI_ctrl_i/BPI_rbk_FIFO_data_i/fifo_36_bl.fifo_36_bl</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">gtx_alct_2link_test_i/gtx1_frame_check/register_chan_seq[2].rx_chanbond_reg_i</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">DS_OPTRST/GEN_DIN[230].FD_DIN</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[2].gbldl.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="old" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1</arg>&quot; of type &quot;<arg fmt="%s" index="3">FIFO36E1</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;0&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;1&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;2&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;4&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;5&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;6&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;7&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;8&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;9&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;10&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;11&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;12&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;13&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;14&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;15&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;16&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;17&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;18&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;19&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;20&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;21&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;22&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;23&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;24&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;25&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;26&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;27&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;28&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;29&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;30&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;31&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;32&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;33&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;34&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_FREE_AGENT_PORT_LA_CTRL&lt;35&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;0&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;1&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;2&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;4&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;5&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;6&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;7&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;8&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;9&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;10&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;11&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;12&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;13&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;14&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;15&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;16&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;17&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;18&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;19&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;20&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;21&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;22&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;23&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;24&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;25&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;26&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;27&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;28&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;29&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;30&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;31&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;32&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;33&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;34&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MBC/CSP_CONTROL_FSM_PORT_LA_CTRL&lt;35&gt;</arg>&apos; has no driver
+</msg>
+
+</messages>
+
