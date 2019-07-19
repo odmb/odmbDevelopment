@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-07-18T17:04:01</DateModified>
+  <DateModified>2019-07-19T16:35:39</DateModified>
   <ModuleName>ODMB_UCSB_V2</ModuleName>
   <SummaryTimeStamp>2019-07-18T16:03:28</SummaryTimeStamp>
-  <SavedFilePath>/home/hualin/ODMB/firmware/odmb_ucsb_v2_alct_test/iseconfig/ODMB_UCSB_V2.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/hualin/ODMB/firmware/odmb_ucsb_v2_alct_test/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/hualin/ODMB/firmware/odmb_alct_test_2019/odmb_ucsb_v2_alct_test/iseconfig/ODMB_UCSB_V2.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/hualin/ODMB/firmware/odmb_alct_test_2019/odmb_ucsb_v2_alct_test/</ImplementationReportsDirectory>
   <DateInitialized>2019-07-17T19:52:42</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -699,6 +699,10 @@ module gtx_alct_link_test_top #
     initial rxgood1 = 2'b1;
 
     reg [6:1] ledr_inner, ledg_inner;
+    reg [27:0] reset_counter0 = 28'd0;
+    reg [28:0] error_counter0 = 29'd0;
+    reg [27:0] reset_counter1 = 28'd0;
+    reg [28:0] error_counter1 = 29'd0;
 
     always @(posedge gtx0_rxusrclk2_i)
 
@@ -725,19 +729,48 @@ module gtx_alct_link_test_top #
             rxgood1 <= 2'b1;
         end
 
-     ledr_inner[6] <= rxgood0;
-     ledr_inner[5] <= rxgood0;
-     ledr_inner[4] <= rxgood0;
-     ledr_inner[3] <= rxgood0;
-     ledr_inner[2] <= rxgood0;
-     ledr_inner[1] <= rxgood0;
+        reset_counter0 <= reset_counter0 + 1;        
+        if (reset_counter0 == 28'hFFFFFFF) begin
+            if (rxgood0 == 2'b1) begin
+                error_counter0 <= 29'd1;
+            end else begin
+                error_counter0 <= 29'd0; 
+                reset_counter0 <= 28'd0;
+            end
+        end else begin
+            if (rxgood0 == 2'b1) begin
+                error_counter0 <= error_counter0 + 1;
+            end
+        end
 
-     ledg_inner[6] <= rxgood1;
-     ledg_inner[5] <= rxgood1;
-     ledg_inner[4] <= rxgood1;
-     ledg_inner[3] <= rxgood1;
-     ledg_inner[2] <= rxgood1;
-     ledg_inner[1] <= rxgood1;
+
+        reset_counter1 <= reset_counter1 + 1;        
+        if (reset_counter1 == 28'hFFFFFFF) begin
+            if (rxgood1 == 2'b1) begin
+                error_counter1 <= 29'd1;
+            end else begin
+                error_counter1 <= 29'd0; 
+                reset_counter1 <= 28'd0;
+            end
+        end else begin
+            if (rxgood1 == 2'b1) begin
+                error_counter1 <= error_counter1 + 1;
+            end
+        end
+
+        ledr_inner[6] <= rxgood0 || (|error_counter0);
+        ledr_inner[5] <= rxgood0 || (|error_counter0);
+        ledr_inner[4] <= rxgood0 || (|error_counter0);
+        ledr_inner[3] <= rxgood0 || (|error_counter0);
+        ledr_inner[2] <= rxgood0 || (|error_counter0);
+        ledr_inner[1] <= rxgood0 || (|error_counter0);
+   
+        ledg_inner[6] <= rxgood1 || (|error_counter1);
+        ledg_inner[5] <= rxgood1 || (|error_counter1);
+        ledg_inner[4] <= rxgood1 || (|error_counter1);
+        ledg_inner[3] <= rxgood1 || (|error_counter1);
+        ledg_inner[2] <= rxgood1 || (|error_counter1);
+        ledg_inner[1] <= rxgood1 || (|error_counter1);
 
     end
 
@@ -1370,7 +1403,8 @@ begin : chipscope
     assign  gtx0_ila_in_i[55]                    =  gtx0_rxchanisaligned_i;
     assign  gtx0_ila_in_i[54]                    =  gtx0_rxchanrealign_i;
     assign  gtx0_ila_in_i[53:46]                 =  gtx0_error_count_i;
-    assign  gtx0_ila_in_i[45:0]                  =  46'b0000000000000000000000000000000000000000000000;
+    assign  gtx0_ila_in_i[45:14]                 =  error_counter0;
+    //assign  gtx0_ila_in_i[45:0]                  =  46'b0000000000000000000000000000000000000000000000;
 
     // Chipscope connections on GTX 1
     assign  gtx1_tx_data_vio_async_in_i[31]      =  1'b0;
