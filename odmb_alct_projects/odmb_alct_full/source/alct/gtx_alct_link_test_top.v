@@ -698,27 +698,56 @@ module gtx_alct_link_test_top #
     initial rxgood0 = 2'b1;
     initial rxgood1 = 2'b1;
 
+    reg [15:0] lastCounter0, thisConter0;
+    reg [15:0] lastCounter1, thisConter1;
+
     reg [6:1] ledr_inner, ledg_inner;
     reg [27:0] reset_counter0 = 28'd0;
     reg [28:0] error_counter0 = 29'd0;
     reg [27:0] reset_counter1 = 28'd0;
     reg [28:0] error_counter1 = 29'd0;
 
+    reg [15:0] thisCounter0, thisCounter1;
+    reg [15:0] thisData0, thisData1;
+
+    initial thisCounter0 = 16'h0000; 
+    initial thisCounter1 = 16'h0000; 
+
     always @(posedge gtx0_rxusrclk2_i)
 
     begin
+
         if (gtx0_rxcharisk_i == 2'b01 ) begin
             if (gtx0_rxdata_i == 16'h503C) begin
                   rxgood0 <= 2'b0;
             end else begin
                   rxgood0 <= 2'b1;
             end
+        end else begin
+            if (gtx0_rxdata_i == 16'h0000) begin
+                thisCounter0 <= 16'h0000;
+                thisData0 <= gtx0_rxdata_i;
+            end else begin
+                thisCounter0 <= thisCounter0 + 1;
+                thisData0 <= gtx0_rxdata_i;
+                rxgood0 <= (thisCounter0 != thisData0);
+            end
         end
+
         if (gtx1_rxcharisk_i == 2'b01) begin
             if (gtx1_rxdata_i == 16'h50BC) begin
                   rxgood1 <= 2'b0;
             end else begin
                   rxgood1 <= 2'b1;
+            end
+        end else begin
+            if (gtx1_rxdata_i == 16'h0000) begin
+                thisCounter1 <= 16'h0000;
+                thisData1 <= gtx1_rxdata_i;
+            end else begin
+                thisCounter1 <= thisCounter1 + 1;
+                thisData1 <= gtx1_rxdata_i;
+                rxgood1 <= (thisCounter1 != thisData1);
             end
         end
    
@@ -757,6 +786,9 @@ module gtx_alct_link_test_top #
                 error_counter1 <= error_counter1 + 1;
             end
         end
+
+        //thisCounter0 <= gtx0_rxdata_i;
+        //thisCounter1 <= gtx1_rxdata_i;
 
         ledr_inner[6] <= rxgood0 || (|error_counter0);
         ledr_inner[5] <= rxgood0 || (|error_counter0);
@@ -1403,7 +1435,10 @@ begin : chipscope
     assign  gtx0_ila_in_i[55]                    =  gtx0_rxchanisaligned_i;
     assign  gtx0_ila_in_i[54]                    =  gtx0_rxchanrealign_i;
     assign  gtx0_ila_in_i[53:46]                 =  gtx0_error_count_i;
-    assign  gtx0_ila_in_i[45:14]                 =  error_counter0;
+    assign  gtx0_ila_in_i[45]                    =  1'b0; //gtx0_rxrecclk_i;
+    assign  gtx0_ila_in_i[44:29]                 =  thisData0;
+    assign  gtx0_ila_in_i[28:13]                 =  thisCounter0;
+    //assign  gtx0_ila_in_i[45:14]                 =  error_counter0;
     //assign  gtx0_ila_in_i[45:0]                  =  46'b0000000000000000000000000000000000000000000000;
 
     // Chipscope connections on GTX 1
