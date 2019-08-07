@@ -1,9 +1,9 @@
 PROMGEN: Xilinx Prom Generator P.20131013
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-promgen -w -p mcs -c FF -o /home/hualin/ODMB/firmware/odmb_alct_test_2019/alct_opticalTest_full_v2//alct_opticalTest_full_20190719 -x xcf128x -u 00000000 /home/hualin/ODMB/firmware/odmb_alct_test_2019/alct_opticalTest_full_v2/alct_opticalTest_full_20190719.bit -data_file up 300000 /home/hualin/ODMB/firmware/odmb_alct_test_2019/odmb_ucsb_v2_alct_test/odmb_toprom.hex -bpi_dc parallel -data_width 16 
+promgen -w -p mcs -c FF -o /home/hualin/ODMB/firmware/odmbDevelopment/odmb_alct_projects/odmb_alct_full//ODMB_UCSB_V2 -x xcf128x -u 00000000 /home/hualin/ODMB/firmware/odmbDevelopment/odmb_alct_projects/odmb_alct_full/ODMB_UCSB_V2.bit -data_file up 300000 /home/hualin/ODMB/firmware/odmbDevelopment/odmb_alct_projects/odmb_alct_full/odmb_toprom.hex -bpi_dc parallel -data_width 16 
 
-PROM /home/hualin/ODMB/firmware/odmb_alct_test_2019/alct_opticalTest_full_v2/alct_opticalTest_full_20190719.prm map: Fri Jul 19 18:52:05 2019
+PROM /home/hualin/ODMB/firmware/odmbDevelopment/odmb_alct_projects/odmb_alct_full/ODMB_UCSB_V2.prm map: Wed Aug  7 09:43:34 2019
 
 Calculating PROM checksum with fill value ff
 
@@ -11,8 +11,8 @@ Format        Mcs86 (32-bit)
 Size          16384K
 PROM start    0000:0000
 PROM end      00ff:ffff
-PROM checksum ae60c13a
+PROM checksum ae5802dd
 
         Addr1        Addr2                     Date File(s)
-    0000:0000    0053:638b     Jul 19 18:48:45 2019 /home/hualin/ODMB/firmware/odmb_alct_test_2019/alct_opticalTest_full_v2/alct_opticalTest_full_20190719.bit
-    0060:0000    0060:0010     Jul 18 17:03:18 2019 /home/hualin/ODMB/firmware/odmb_alct_test_2019/odmb_ucsb_v2_alct_test/odmb_toprom.hex
+    0000:0000    0053:638b     Jul 31 11:30:54 2019 /home/hualin/ODMB/firmware/odmbDevelopment/odmb_alct_projects/odmb_alct_full/ODMB_UCSB_V2.bit
+    0060:0000    0060:0010     Aug  7 09:42:45 2019 /home/hualin/ODMB/firmware/odmbDevelopment/odmb_alct_projects/odmb_alct_full/odmb_toprom.hex
