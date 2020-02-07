@@ -7,6 +7,7 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmbDevelopment|odmb_alct_projects|odmb_alct_full|source|odmb_ucsb_v2.vhd</ClosedNode>
          <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct_test|source|odmb_ucsb_v2.vhd/ALCT_OTMB_DATA_GEN_PM - alct_otmb_data_gen - alct_otmb_data_gen_architecture</ClosedNode>
          <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct_test|source|odmb_ucsb_v2.vhd/DCFEB_V6_PM - dcfeb_v6 - dcfeb_v6_arch</ClosedNode>
          <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct_test|source|odmb_ucsb_v2.vhd/GIGALINK_DDU_PM - GIGALINK_DDU - GIGALINK_DDU_ARCH</ClosedNode>
@@ -42,16 +43,17 @@
          <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/bpi_interface_i - bpi_interface</ClosedNode>
          <ClosedNode>/ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|odmb_ucsb_v2.vhd/gtx_alct_2link_test_i - gtx_alct_link_test_top</ClosedNode>
          <ClosedNode>/Unassigned User Library Modules</ClosedNode>
+         <ClosedNode>/dmb_receiver |home|hualin|ODMB|firmware|odmbDevelopment|odmb_alct_projects|odmb_alct_full|source|dmb_receiver|dmb_receiver.v</ClosedNode>
          <ClosedNode>/dmb_receiver |home|hualin|ODMB|firmware|odmb_ucsb_v2_alct|source|dmb_receiver|dmb_receiver.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH (/home/hualin/ODMB/firmware/odmb_ucsb_v2_alct_test/source/odmb_ucsb_v2.vhd)</SelectedItem>
+         <SelectedItem>ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH (/home/hualin/ODMB/firmware/odmbDevelopment/odmb_alct_projects/odmb_alct_full/source/odmb_ucsb_v2.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000329000000020000000000000000000000000200000064ffffffff000000810000000300000002000003290000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ed000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ed0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH (/home/hualin/ODMB/firmware/odmb_ucsb_v2_alct_test/source/odmb_ucsb_v2.vhd)</CurrentItem>
+      <CurrentItem>ODMB_UCSB_V2 - ODMB_UCSB_V2_ARCH (/home/hualin/ODMB/firmware/odmbDevelopment/odmb_alct_projects/odmb_alct_full/source/odmb_ucsb_v2.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
@@ -65,7 +67,7 @@
       <SelectedItems>
          <SelectedItem>Generate Programming File</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >7</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000220000000010000000100000000000000000000000064ffffffff000000810000000000000001000002200000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
