@@ -83,12 +83,14 @@ module gtx_alct_link_test_top #
     input wire  GTXTXRESET_IN,
     input wire  GTXRXRESET_IN,
     //output wire TRACK_DATA_OUT,
-    output wire [6:1] LEDR,
-    output wire [6:1] LEDG,
-    input  wire [1:0]   RXN_IN,
-    input  wire [1:0]   RXP_IN,
-    output wire [1:0]   TXN_OUT,
-    output wire [1:0]   TXP_OUT
+    output wire [15:0] RXDATA_OUT,
+    output wire        RXDATA_VALID,
+    output wire [6:1]  LEDR,
+    output wire [6:1]  LEDG,
+    input  wire [1:0]  RXN_IN,
+    input  wire [1:0]  RXP_IN,
+    output wire [1:0]  TXN_OUT,
+    output wire [1:0]  TXP_OUT
 );
 
 
@@ -805,6 +807,9 @@ module gtx_alct_link_test_top #
         ledg_inner[1] <= rxgood1 || (|error_counter1);
 
     end
+
+    assign  RXDATA_OUT = gtx0_rxdata_i;
+    assign  RXDATA_VALID = (gtx0_rxnotintable_i != 2'b0); 
 
     assign LEDR[6] = ledr_inner[6];
     assign LEDR[5] = ledr_inner[5];

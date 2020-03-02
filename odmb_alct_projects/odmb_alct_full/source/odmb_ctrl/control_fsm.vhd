@@ -342,7 +342,7 @@ begin
         oefifo_b_inner(dev_cnt)  <= '0';
         renfifo_b_inner(dev_cnt) <= '0';
         tx_cnt_en                <= '1';
-        if (tx_cnt >= tx_cnt_max(dev_cnt)) then
+        if (tx_cnt >= tx_cnt_max(dev_cnt) and not (DATAIN = x"50BC") ) then
           dav_d <= '1';
         else
           dav_d <= '0';

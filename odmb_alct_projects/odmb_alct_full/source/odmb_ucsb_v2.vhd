@@ -953,6 +953,7 @@ architecture ODMB_UCSB_V2_ARCH of ODMB_UCSB_V2 is
   signal otmb_push_dly_p1, alct_push_dly_p1        : integer range 0 to 64;
   signal datafifo_mask                             : std_logic;
   signal data_fifo_we                              : std_logic_vector (NFEB+2 downto 1);
+  signal data_fifo_we_alct_optical                 : std_logic;
 
 -- VME Signals
 
@@ -974,12 +975,22 @@ architecture ODMB_UCSB_V2_ARCH of ODMB_UCSB_V2 is
   signal alct_data_valid     : std_logic;
   signal alct_data           : std_logic_vector(15 downto 0);
   signal alct_q, alct_qq     : std_logic_vector(17 downto 0);
+  signal alct_data_optical               : std_logic_vector(15 downto 0);
+  signal alct_data_optical_q              : std_logic_vector(15 downto 0);
+  signal alct_data_optical_qq              : std_logic_vector(15 downto 0);
+  signal alct_data_valid_optical    : std_logic;
+  signal alct_data_start    : std_logic := '0';
+  signal alct_end_q    : std_logic_vector(4 downto 0);
+  signal alct_data_valid_o : std_logic := '0';
 
   signal rx_alct_data_valid : std_logic;
 
   signal alct_fifo_data_valid : std_logic;
   signal alct_fifo_data_in    : std_logic_vector(17 downto 0);
   signal alct_fifo_data_out   : std_logic_vector (17 downto 0);
+  signal alct_fifo_data_optical_valid : std_logic;
+  signal alct_fifo_data_optical_in    : std_logic_vector(17 downto 0);
+  signal alct_fifo_data_optical_out   : std_logic_vector (17 downto 0);
 
 -- OTMB ----------------------
   signal gen_otmb_data_valid : std_logic;
@@ -1227,8 +1238,9 @@ architecture ODMB_UCSB_V2_ARCH of ODMB_UCSB_V2 is
 
   signal data_fifo_empty_b                : std_logic_vector(NFEB+2 downto 1);
   signal data_fifo_half_full              : std_logic_vector(NFEB+2 downto 1);
-  signal alct_fifo_empty, otmb_fifo_empty : std_logic;
-  signal alct_fifo_full, otmb_fifo_full   : std_logic;
+  signal alct_optical_fifo_empty, alct_fifo_empty, otmb_fifo_empty : std_logic;
+  signal alct_optical_fifo_full,  alct_fifo_full, otmb_fifo_full   : std_logic;
+  signal alct_optical_fifo_half_full : std_logic;
 
   signal raw_l1a, tc_l1a           : std_logic;
   signal raw_lct                   : std_logic_vector(NFEB downto 0);
@@ -1762,6 +1774,8 @@ begin
     Q1_CLK0_REFCLK_I => gl0_clk,
     GTXTXRESET_IN => opt_reset,
     GTXRXRESET_IN => opt_reset,
+    RXDATA_OUT => alct_data_optical,
+    RXDATA_VALID => alct_data_valid_optical,
     LEDR => ledr,
     LEDG => ledg,
     RXN_IN => alct_2rx_n,
@@ -2177,6 +2191,22 @@ GIGALINK_DDU_PM : gigalink_ddu
                   otmb(14 downto 0) when IS_SIMULATION = 0 else otmb_tx_tb;
 
   data_fifo_we(NFEB+2) <= alct_fifo_data_valid and datafifo_mask;
+  data_fifo_we_alct_optical <= alct_fifo_data_optical_valid and datafifo_mask;
+
+  datafifo_alct_optical_pm : datafifo_40mhz
+    port map(
+      rst       => l1acnt_fifo_rst,
+      wr_clk    => clk40,
+      rd_clk    => dduclk,
+      din       => alct_fifo_data_optical_in,
+      wr_en     => data_fifo_we_alct_optical,
+      rd_en     => data_fifo_re(NFEB+2),
+      dout      => alct_fifo_data_optical_out,
+      full      => alct_optical_fifo_full,
+      empty     => alct_optical_fifo_empty,
+      prog_full => alct_optical_fifo_half_full
+      );
+
   datafifo_alct_pm : datafifo_40mhz
     port map(
       rst       => l1acnt_fifo_rst,
@@ -2206,7 +2236,8 @@ GIGALINK_DDU_PM : gigalink_ddu
       prog_full => data_fifo_half_full(NFEB+1)
       );
 
-  PULSEEOFALCT : PULSE2SAME port map(eof_data(NFEB+2), clk40, reset, alct_fifo_data_in(17));
+  PULSEEOFALCT : PULSE2SAME port map(eof_data(NFEB+2), clk40, reset, alct_fifo_data_optical_in(17));
+  --PULSEEOFALCT : PULSE2SAME port map(eof_data(NFEB+2), clk40, reset, alct_fifo_data_in(17));
   PULSEEOFOTMB : PULSE2SAME port map(eof_data(NFEB+1), clk40, reset, otmb_fifo_data_in(17));
 
 
@@ -2220,7 +2251,8 @@ GIGALINK_DDU_PM : gigalink_ddu
               dcfeb_fifo_out(6)(15 downto 0)  when data_fifo_oe = "111011111" else
               dcfeb_fifo_out(7)(15 downto 0)  when data_fifo_oe = "110111111" else
               otmb_fifo_data_out(15 downto 0) when data_fifo_oe = "101111111" else
-              alct_fifo_data_out(15 downto 0) when data_fifo_oe = "011111111" else
+              alct_fifo_data_optical_out(15 downto 0) when data_fifo_oe = "011111111" else
+              --alct_fifo_data_out(15 downto 0) when data_fifo_oe = "011111111" else
               (others => 'Z');
   eof <= dcfeb_fifo_out(1)(17) when data_fifo_oe = "111111110" else
          dcfeb_fifo_out(2)(17)  when data_fifo_oe = "111111101" else
@@ -2230,7 +2262,8 @@ GIGALINK_DDU_PM : gigalink_ddu
          dcfeb_fifo_out(6)(17)  when data_fifo_oe = "111011111" else
          dcfeb_fifo_out(7)(17)  when data_fifo_oe = "110111111" else
          otmb_fifo_data_out(17) when data_fifo_oe = "101111111" else
-         alct_fifo_data_out(17) when data_fifo_oe = "011111111" else
+         alct_fifo_data_optical_out(17) when data_fifo_oe = "011111111" else
+         --alct_fifo_data_out(17) when data_fifo_oe = "011111111" else
          '0';
 
   -- Sync alct and otmb to our clock. Probably not needed
@@ -2241,6 +2274,23 @@ GIGALINK_DDU_PM : gigalink_ddu
     FDOTMB  : FD port map(otmb_q(index), clk40, otmb(index));
     FDOTMBQ : FD port map(otmb_qq(index), clk40, otmb_q(index));
   end generate GENOTMBSYNC;
+
+  GENALCTOSYNC : for index in 0 to 15 generate
+  begin
+    FDALCTO  : FD port map(alct_data_optical_q(index), clk40, alct_data_optical(index));
+    FDALCTOQ : FD port map(alct_data_optical_qq(index), clk40, alct_data_optical_q(index));
+  end generate GENALCTOSYNC;
+
+  alct_data_start <= '1' when alct_data_optical_qq = x"DB0A" and alct_data_valid_optical = '1' else '0';
+  alct_end_q(0) <= '1' when alct_data_optical_qq = x"DE0D" and alct_data_valid_optical = '1' else '0';
+
+  FDALCTEND1Q: FD port map(alct_end_q(1), clk40, alct_end_q(0));
+  FDALCTEND2Q: FD port map(alct_end_q(2), clk40, alct_end_q(1));
+  FDALCTEND3Q: FD port map(alct_end_q(3), clk40, alct_end_q(2));
+  FDALCTEND4Q: FD port map(alct_end_q(4), clk40, alct_end_q(3));
+
+  alct_data_valid_o <= '1' when (alct_data_start = '1' and alct_end_q(4) = '0') else
+                       '0' when (alct_data_start = '0' and alct_end_q(4) = '1');
 
   rx_alct_data_valid <= not alct_qq(17);
   alct_data_valid    <= '0' when kill(9) = '1' else
@@ -2297,6 +2347,17 @@ GIGALINK_DDU_PM : gigalink_ddu
   --eof_data(9) <= alct_fifo_data_in(16);
   --eof_data(8) <= otmb_fifo_data_in(16);
 
+  ALCT_OPTICAL_EOFGEN_PM : EOFGEN
+    port map (
+      clk => clk40,
+      rst => reset,
+
+      dv_in   => alct_data_valid_o,
+      data_in => alct_data_optical_qq,
+
+      dv_out   => alct_fifo_data_optical_valid,
+      data_out => alct_fifo_data_optical_in
+      );
 
   ALCT_EOFGEN_PM : EOFGEN
     port map (
