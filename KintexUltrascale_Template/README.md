@@ -1,3 +1,6 @@
+# Template
+Only the source folder is requried. Other folders can be generated using the generator tcl files.
+
 ## File description 
 - source/Firmware.vhd: Module
 - source/Firmware_pkg.vhd: Pakage file that holds global variables
@@ -6,10 +9,10 @@
 - source/Firmware_tb.tcl: Simulation file
 - source/data: COE data files for LUTs
 
-- source/ip/xcku040-ffva1156-2-e/clockManager/clockManager.xci: IP for generating clocks
-- source/ip/xcku040-ffva1156-2-e/ila/ila.xci: IP for logic analyzer
-- source/ip/xcku040-ffva1156-2-e/lut_input1/lut_input1.xci: IP for lut input 1
-- source/ip/xcku040-ffva1156-2-e/lut_input2/lut_input2.xci: IP for lut input 2
+- ip/xcku040-ffva1156-2-e/clockManager/clockManager.xci: IP for generating clocks
+- ip/xcku040-ffva1156-2-e/ila/ila.xci: IP for logic analyzer
+- ip/xcku040-ffva1156-2-e/lut_input1/lut_input1.xci: IP for lut input 1
+- ip/xcku040-ffva1156-2-e/lut_input2/lut_input2.xci: IP for lut input 2
 
 - project/project.xpr: Vivado project for module. Set for xcku035-ffva1156-1-c
 - tb_project/tb_project.xpr: Vivado project for testbench. Set for KCU105 (xcku040-ffva1156-2-e)

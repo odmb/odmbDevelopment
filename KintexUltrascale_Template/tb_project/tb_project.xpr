@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="20" Path="/data/jbkim/odmb/development/KintexUltrascale_Template/tb_project/tb_project.xpr">
+<Project Version="7" Minor="20" Path="/data/jbkim/odmb/odmbDevelopment/KintexUltrascale_Template/tb_project/tb_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="42f08b1fe4794cfdaf6876e20357fb45"/>
+    <Option Name="Id" Val="e5d6419750a34ae58909aa9c14c9e78a"/>
     <Option Name="Part" Val="xcku040-ffva1156-2-e"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -29,7 +29,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSANumComputeUnits" Val="16"/>
-    <Option Name="WTXSimLaunchSim" Val="1"/>
+    <Option Name="WTXSimLaunchSim" Val="0"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -52,28 +52,28 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../source/ip/xcku040-ffva1156-2-e/lut_input2/lut_input2.xci">
+      <File Path="$PPRDIR/../ip/xcku040-ffva1156-2-e/lut_input2/lut_input2.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../source/ip/xcku040-ffva1156-2-e/lut_input1/lut_input1.xci">
+      <File Path="$PPRDIR/../ip/xcku040-ffva1156-2-e/lut_input1/lut_input1.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../source/ip/xcku040-ffva1156-2-e/ila/ila.xci">
+      <File Path="$PPRDIR/../ip/xcku040-ffva1156-2-e/ila/ila.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../source/ip/xcku040-ffva1156-2-e/clockManager/clockManager.xci">
+      <File Path="$PPRDIR/../ip/xcku040-ffva1156-2-e/clockManager/clockManager.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
