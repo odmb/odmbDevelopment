@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Firmware_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Firmware_tb" />
+            <top_module name="firmware_pkg" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="800523410fs"></ZoomEndTime>
+      <Cursor1Time time="633269000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="138"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="41" />
+   <wvobject type="logic" fp_name="/Firmware_tb/CLK_IN_P">
+      <obj_property name="ElementShortName">CLK_IN_P</obj_property>
+      <obj_property name="ObjectShortName">CLK_IN_P</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/CLK_IN_N">
+      <obj_property name="ElementShortName">CLK_IN_N</obj_property>
+      <obj_property name="ObjectShortName">CLK_IN_N</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/J36_USER_SMA_GPIO_P">
+      <obj_property name="ElementShortName">J36_USER_SMA_GPIO_P</obj_property>
+      <obj_property name="ObjectShortName">J36_USER_SMA_GPIO_P</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/clk_in_buf">
+      <obj_property name="ElementShortName">clk_in_buf</obj_property>
+      <obj_property name="ObjectShortName">clk_in_buf</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/sysclk">
+      <obj_property name="ElementShortName">sysclk</obj_property>
+      <obj_property name="ObjectShortName">sysclk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/sysclkQuarter">
+      <obj_property name="ElementShortName">sysclkQuarter</obj_property>
+      <obj_property name="ObjectShortName">sysclkQuarter</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/sysclkDouble">
+      <obj_property name="ElementShortName">sysclkDouble</obj_property>
+      <obj_property name="ObjectShortName">sysclkDouble</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/inputCounter">
+      <obj_property name="ElementShortName">inputCounter[13:0]</obj_property>
+      <obj_property name="ObjectShortName">inputCounter[13:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/intime_s">
+      <obj_property name="ElementShortName">intime_s</obj_property>
+      <obj_property name="ObjectShortName">intime_s</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/input1_s">
+      <obj_property name="ElementShortName">input1_s[11:0]</obj_property>
+      <obj_property name="ObjectShortName">input1_s[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/input2_s">
+      <obj_property name="ElementShortName">input2_s[11:0]</obj_property>
+      <obj_property name="ObjectShortName">input2_s[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/output_s">
+      <obj_property name="ElementShortName">output_s[19:0]</obj_property>
+      <obj_property name="ObjectShortName">output_s[19:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/trig0">
+      <obj_property name="ElementShortName">trig0[255:0]</obj_property>
+      <obj_property name="ObjectShortName">trig0[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/data">
+      <obj_property name="ElementShortName">data[4095:0]</obj_property>
+      <obj_property name="ObjectShortName">data[4095:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/lut_input_addr_s">
+      <obj_property name="ElementShortName">lut_input_addr_s[2:0]</obj_property>
+      <obj_property name="ObjectShortName">lut_input_addr_s[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/lut_input1_dout_c">
+      <obj_property name="ElementShortName">lut_input1_dout_c[11:0]</obj_property>
+      <obj_property name="ObjectShortName">lut_input1_dout_c[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/lut_input2_dout_c">
+      <obj_property name="ElementShortName">lut_input2_dout_c[11:0]</obj_property>
+      <obj_property name="ObjectShortName">lut_input2_dout_c[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/firmware_i/CLKIN">
+      <obj_property name="ElementShortName">CLKIN</obj_property>
+      <obj_property name="ObjectShortName">CLKIN</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/firmware_i/INPUT1">
+      <obj_property name="ElementShortName">INPUT1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">INPUT1[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/firmware_i/INPUT2">
+      <obj_property name="ElementShortName">INPUT2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">INPUT2[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/firmware_i/OUTPUT">
+      <obj_property name="ElementShortName">OUTPUT[19:0]</obj_property>
+      <obj_property name="ObjectShortName">OUTPUT[19:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/firmware_i/FIFOOUT">
+      <obj_property name="ElementShortName">FIFOOUT[17:0]</obj_property>
+      <obj_property name="ObjectShortName">FIFOOUT[17:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/firmware_i/input1_buf">
+      <obj_property name="ElementShortName">input1_buf[11:0]</obj_property>
+      <obj_property name="ObjectShortName">input1_buf[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/firmware_i/input2_buf">
+      <obj_property name="ElementShortName">input2_buf[11:0]</obj_property>
+      <obj_property name="ObjectShortName">input2_buf[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/firmware_i/add_res">
+      <obj_property name="ElementShortName">add_res[11:0]</obj_property>
+      <obj_property name="ObjectShortName">add_res[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/firmware_i/output_buf">
+      <obj_property name="ElementShortName">output_buf[19:0]</obj_property>
+      <obj_property name="ObjectShortName">output_buf[19:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/i_ila/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/firmware_i/wr_clk_i">
+      <obj_property name="ElementShortName">wr_clk_i</obj_property>
+      <obj_property name="ObjectShortName">wr_clk_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/firmware_i/rd_clk_i">
+      <obj_property name="ElementShortName">rd_clk_i</obj_property>
+      <obj_property name="ObjectShortName">rd_clk_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/firmware_i/srst">
+      <obj_property name="ElementShortName">srst</obj_property>
+      <obj_property name="ObjectShortName">srst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/firmware_i/prog_full">
+      <obj_property name="ElementShortName">prog_full</obj_property>
+      <obj_property name="ObjectShortName">prog_full</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/firmware_i/wr_rst_busy">
+      <obj_property name="ElementShortName">wr_rst_busy</obj_property>
+      <obj_property name="ObjectShortName">wr_rst_busy</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/firmware_i/rd_rst_busy">
+      <obj_property name="ElementShortName">rd_rst_busy</obj_property>
+      <obj_property name="ObjectShortName">rd_rst_busy</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/firmware_i/wr_en">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/firmware_i/rd_en">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/firmware_i/din">
+      <obj_property name="ElementShortName">din[17:0]</obj_property>
+      <obj_property name="ObjectShortName">din[17:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/firmware_i/dout">
+      <obj_property name="ElementShortName">dout[17:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[17:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/firmware_i/full">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Firmware_tb/firmware_i/empty">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/i_ila/probe0">
+      <obj_property name="ElementShortName">probe0[255:0]</obj_property>
+      <obj_property name="ObjectShortName">probe0[255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Firmware_tb/i_ila/probe1">
+      <obj_property name="ElementShortName">probe1[4095:0]</obj_property>
+      <obj_property name="ObjectShortName">probe1[4095:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

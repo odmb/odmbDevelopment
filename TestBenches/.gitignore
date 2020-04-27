@@ -1,0 +1,10 @@
+*
+
+!*.vhd
+!*.v
+!*.tcl
+!*.xdc
+!*.xpr
+!*.xci
+!*.coe
+!*.wcfg
