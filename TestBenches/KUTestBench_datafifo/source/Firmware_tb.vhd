@@ -20,10 +20,11 @@ end Firmware_tb;
 architecture Behavioral of Firmware_tb is
   component clockManager is
   port (
-    CLK_IN300 : in std_logic := '0';
-    CLK_OUT40 : out std_logic := '0';
-    CLK_OUT10 : out std_logic := '0';
-    CLK_OUT80 : out std_logic := '0'
+    CLK_IN300  : in std_logic := '0';
+    CLK_OUT40  : out std_logic := '0';
+    CLK_OUT10  : out std_logic := '0';
+    CLK_OUT80  : out std_logic := '0';
+    CLK_OUT160 : out std_logic := '0'
   );
   end component;
   component ila is
@@ -53,6 +54,7 @@ architecture Behavioral of Firmware_tb is
   signal sysclk : std_logic := '0';
   signal sysclkQuarter : std_logic := '0'; 
   signal sysclkDouble : std_logic := '0';
+  signal sysclkQuad : std_logic := '0';
   signal inputCounter: unsigned(13 downto 0) := (others=> '0');
   signal intime_s: std_logic := '0';
   -- Constants
@@ -106,7 +108,8 @@ begin
             CLK_IN300=> clk_in_buf,
             CLK_OUT40=> sysclk,
             CLK_OUT10=> sysclkQuarter,
-            CLK_OUT80=> sysclkDouble
+            CLK_OUT80=> sysclkDouble,
+            CLK_OUT160=> sysclkQuad
           );
 
   J36_USER_SMA_GPIO_P <= sysclk;
@@ -187,6 +190,8 @@ begin
   firmware_i: entity work.Firmware
   port map(
             CLKIN=> sysclk,
+            RDCLK=> sysclkDouble,
+            WRCLK=> sysclkQuad,
             RESET=> rst_fifo,
             INPUT1=> input1_s,
             INPUT2=> input2_s,

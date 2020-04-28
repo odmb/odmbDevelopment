@@ -11,6 +11,8 @@ use work.Firmware_pkg.all;
 entity Firmware is
   PORT (
     CLKIN   : in STD_LOGIC;
+    RDCLK   : in STD_LOGIC;
+    WRCLK   : in STD_LOGIC;
     RESET   : in STD_LOGIC;
     INPUT1  : in std_logic_vector(11 downto 0);
     INPUT2  : in std_logic_vector(11 downto 0);
@@ -85,13 +87,13 @@ begin
 ---- Clock buffers for testbench ----
   wr_clk_buf: bufg
     PORT map(
-      i => CLKIN,
+      i => WRCLK,
       o => wr_clk_i
       );
 
   rd_clk_buf: bufg
     PORT map(
-      i => CLKIN,
+      i => RDCLK,
       o => rd_clk_i
       );
 
