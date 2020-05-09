@@ -20,4 +20,6 @@ package Firmware_pkg is
   ;
   constant in_synthesis : BOOLEAN := not in_simulation;
 
+  type FSM_FIFO is ( INIT, STANDBY, RDONLY, WRONLY, RDWR );
+
 end Firmware_pkg;

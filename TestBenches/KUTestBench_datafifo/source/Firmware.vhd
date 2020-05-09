@@ -10,21 +10,25 @@ use work.Firmware_pkg.all;
 
 entity Firmware is
   PORT (
-    CLKIN   : in STD_LOGIC;
-    RDCLK   : in STD_LOGIC;
-    WRCLK   : in STD_LOGIC;
-    RESET   : in STD_LOGIC;
-    INPUT1  : in std_logic_vector(11 downto 0);
-    INPUT2  : in std_logic_vector(11 downto 0);
+    CLKIN   : in std_logic;
+    RDCLK   : in std_logic;
+    WRCLK   : in std_logic;
+    RESET   : in std_logic;
+    WRDAV   : in std_logic;
+    RDNEXT  : in std_logic;
+    INPUT1  : in std_logic_vector(15 downto 0);
+    INPUT2  : in std_logic_vector(15 downto 0);
     OUTPUT  : out std_logic_vector(19 downto 0);
-    FIFOOUT : out std_logic_vector(17 downto 0)
+    FIFODAV : out std_logic;
+    FIFOOUT : out std_logic_vector(17 downto 0);
+    FIFOERR : out std_logic_vector(3 downto 0)
     );
 end Firmware;
 
 architecture Behavioral of Firmware is
   -- Constants
   constant bw_fifo  : integer := 18;
-  constant bw_add   : integer := 12;
+  constant bw_add   : integer := 16;
   constant bw_out   : integer := 20;
 
   component datafifo_dcfeb_top is
@@ -49,6 +53,15 @@ architecture Behavioral of Firmware is
   signal add_res : unsigned(bw_add-1 downto 0) := (others=> '0');
   signal output_buf : std_logic_vector(bw_out-1 downto 0) := (others=> '0');
 
+  -- fifo state
+  signal st_fifo  : FSM_FIFO := STANDBY;
+  signal counter  : unsigned(15 downto 0) := (others => '0');
+  signal wr_en_i  : std_logic := '0';    -- the enable of enable
+  signal rd_en_i  : std_logic := '0';    -- the enable of enable
+  signal wr_dav   : std_logic := '0';    -- data available
+  signal rd_dav   : std_logic := '0';    -- data available
+  signal fifo_err : std_logic_vector(3 downto 0) := (others => '0');
+
   -- fifo signals
   signal wr_clk_i                       :   std_logic := '0';
   signal rd_clk_i                       :   std_logic := '0';
@@ -68,56 +81,43 @@ begin
 -- Start of the simple addition algorithm
   logic: process (CLKIN)
   begin
-    if CLKIN'event and CLKIN='1' then
+    if WRCLK'event and WRCLK='1' then
       -- Pipeline 0 (Buffer for input)
       input1_buf <= INPUT1;
       input2_buf <= INPUT2;
       -- Pipeline 1
-      add_res <= unsigned(input1_buf) + unsigned(input2_buf) + unsigned(input1_buf) + unsigned(input2_buf);
+      add_res <= unsigned(input1_buf) + unsigned(input2_buf);
       -- Pipeline 2
       output_buf <= std_logic_vector(resize(add_res,bw_out));
       -- Pipeline 3 (Buffer for output)
       OUTPUT <= output_buf;
-      -- Assign the input to fifo as the result of addition as well
-      -- res_cpy <= add_res;
-      din <= std_logic_vector(resize(add_res,bw_fifo));
     end if;
   end process;
-
----- Clock buffers for testbench ----
-  wr_clk_buf: bufg
-    PORT map(
-      i => WRCLK,
-      o => wr_clk_i
-      );
-
-  rd_clk_buf: bufg
-    PORT map(
-      i => RDCLK,
-      o => rd_clk_i
-      );
 
 ------------------
-  process(full,CLKIN,RESET)
-  begin
-    if RESET = '1' then
-      wr_en <= '0';
-      rd_en <= '0';
-    elsif CLKIN'event and empty='1' then
-      wr_en <= '1';
-      rd_en <= '0';
-    end if;
-    if rising_edge(full) then
-      wr_en <= '0';
-      rd_en <= '1';
-    elsif falling_edge(full) then
-      wr_en <= '1';
-      rd_en <= '0';
-    end if;
-  end process;
+
+  -- Assign the input to fifo as the result of addition as well
+  din <= "10" & INPUT1; -- 2 bits + input 16 bits
+  -- wr_dav <= din(0);
+
+  wr_clk_i <= WRCLK;
+  rd_clk_i <= RDCLK;
+
+  wr_dav <= WRDAV;
+  rd_dav <= not empty;
+
+  wr_en <= wr_dav and wr_en_i and not full and not wr_rst_busy;
+  rd_en <= rd_dav and rd_en_i and not empty and not rd_rst_busy;
+
+  fifo_err(0) <= full;
+
+  wr_en_i <= '1';
+  rd_en_i <= RDNEXT;
 
   srst <= RESET;
   FIFOOUT <= dout;
+  FIFODAV <= rd_dav;
+  FIFOERR <= fifo_err;
 
   datafifo_dcfeb_inst : datafifo_dcfeb_top
     PORT MAP (
