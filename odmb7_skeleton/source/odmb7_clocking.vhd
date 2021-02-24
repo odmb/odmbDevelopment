@@ -42,7 +42,10 @@ entity odmb7_clocking is
     mgtrefclk0_227 : out std_logic;
     mgtrefclk1_227 : out std_logic;
 
+    clk_sysclk625k : out std_logic;
+    clk_sysclk2p5 : out std_logic;
     clk_sysclk10 : out std_logic;
+    clk_sysclk20 : out std_logic;
     clk_sysclk40 : out std_logic;
     clk_sysclk80 : out std_logic;
     clk_cmsclk : out std_logic;
@@ -65,11 +68,12 @@ architecture Behavioral of odmb7_clocking is
 
   component clockManager is
     port (
-      clk_in1    : in std_logic;
-      clk_out10  : out std_logic;
-      clk_out40  : out std_logic;
-      clk_out80  : out std_logic;
-      clk_out160 : out std_logic
+      clk_in1   : in std_logic;
+      clk_out5  : out std_logic;
+      clk_out10 : out std_logic;
+      clk_out20 : out std_logic;
+      clk_out40 : out std_logic;
+      clk_out80 : out std_logic
       );
   end component;
 
@@ -79,6 +83,12 @@ architecture Behavioral of odmb7_clocking is
   signal mgtrefclk1_226_odiv2 : std_logic;
   signal mgtrefclk0_227_odiv2 : std_logic;
   signal mgtrefclk1_227_odiv2 : std_logic;
+
+  signal clk_sysclk5 : std_logic;
+  signal clk2p5_inv : std_logic := '1';
+  signal clk2p5_unbuf : std_logic := '0';
+  -- signal clk1p25_inv : std_logic;
+  -- signal clk625k_inv : std_logic;
 
   signal clk_cmsclk_unbuf : std_logic;
   signal clk_gp6_unbuf : std_logic;
@@ -246,10 +256,27 @@ begin
 
   clockManager_i : clockManager
     port map (
-      clk_in1   => clk_cmsclk_unbuf, -- input 40 MHz
-      clk_out10 => clk_sysclk10,   -- output 10 MHz
-      clk_out40 => clk_sysclk40,   -- output 40 MHz
-      clk_out80 => clk_sysclk80    -- output 80 MHz
+      clk_in1   => clk_cmsclk_unbuf, -- input  40 MHz
+      clk_out5  => clk_sysclk5,      -- output  5 MHz
+      clk_out10 => clk_sysclk10,     -- output 10 MHz
+      clk_out20 => clk_sysclk20,     -- output 20 MHz
+      clk_out40 => clk_sysclk40,     -- output 40 MHz
+      clk_out80 => clk_sysclk80      -- output 80 MHz
       );
+
+
+  -------------------------------------------------------------------------------------------
+  -- Handle clock synthesizer signals and generate clocks
+  -------------------------------------------------------------------------------------------
+  -- In first version of test firmware, we will want to generate everything from 40 MHz cms clock, likely with Clock Manager IP
+  -- Generate lower frequency clocks by FD
+  clk2p5_inv <= not clk2p5_unbuf;
+  FD_clk2p5 : FD port map(D => clk2p5_inv, C => clk_sysclk5, Q => clk2p5_unbuf);
+  BUFG_clk2p5 : BUFG port map(I => clk2p5_unbuf, O => clk_sysclk2p5);
+  -- clk1p25_inv <= not clk1p25;
+  -- clk625k_inv <= not clk625k_unbuf;
+  -- FD_clk1p25 : FD port map(D => clk1p25_inv, C => clk2p5_unbuf, Q => clk1p25);
+  -- FD_clk625k : FD port map(D => clk625k_inv, C => clk1p25, Q => clk625k_unbuf);
+  -- BUFG_clk625k : BUFG port map(I => clk625k_unbuf, O => clk625k);
 
 end Behavioral;

@@ -91,6 +91,17 @@ entity odmb7_top is
     LVMB_SDIN    : out std_logic;
 
     --------------------------------
+    -- OTMB communication signals
+    --------------------------------
+    OTMB        : in  std_logic_vector(35 downto 0);      -- "TMB[35:0]" in Bank 44-45
+    RAWLCT      : in  std_logic_vector(NCFEB-1 downto 0); -- Bank 45
+    OTMB_DAV    : in  std_logic;                          -- "TMB_DAV" in Bank 45
+    OTMB_FF_CLK : in  std_logic;                          -- "TMB_FF_CLK" in Bank 45, not used
+    RSVTD_IN    : in  std_logic_vector(7 downto 3);       -- "RSVTD[7:3]" in Bank 44-45
+    RSVTD_OUT   : out std_logic_vector(2 downto 0);       -- "RSVTD[2:0]" in Bank 44-45
+    LCT_RQST    : out std_logic_vector(2 downto 1);       -- Bank 45
+
+    --------------------------------
     -- ODMB optical ports
     --------------------------------
     -- Acutally connected optical TX/RX signals
@@ -208,12 +219,15 @@ architecture odmb_inst of odmb7_top is
       mgtrefclk1_226 : out std_logic;   -- MGT refclk for GT wizard
       mgtrefclk0_227 : out std_logic;   -- MGT refclk for GT wizard
       mgtrefclk1_227 : out std_logic;   -- MGT refclk for GT wizard
-      clk_sysclk10   : out std_logic;
-      clk_sysclk40   : out std_logic;
-      clk_sysclk80   : out std_logic;
-      clk_cmsclk     : out std_logic;
-      clk_emcclk     : out std_logic;   -- buffed EMC clokc
-      clk_lfclk      : out std_logic;   -- buffed LF clokc
+      clk_sysclk625k : out std_logic;
+      clk_sysclk2p5  : out std_logic;
+      clk_sysclk10   : out std_logic;   -- derived clock from MMCM
+      clk_sysclk20   : out std_logic;   -- derived clock from MMCM
+      clk_sysclk40   : out std_logic;   -- derived clock from MMCM
+      clk_sysclk80   : out std_logic;   -- derived clock from MMCM
+      clk_cmsclk     : out std_logic;   -- buffed CMS clock, 40.07897 MHz
+      clk_emcclk     : out std_logic;   -- buffed EMC clock
+      clk_lfclk      : out std_logic;   -- buffed LF clock
       clk_gp6        : out std_logic;
       clk_gp7        : out std_logic;
       clk_mgtclk1    : out std_logic;   -- buffed ODIV2 port of the refclks
@@ -235,7 +249,10 @@ architecture odmb_inst of odmb7_top is
   signal mgtrefclk0_227 : std_logic;
   signal mgtrefclk1_227 : std_logic;
   signal gth_sysclk_i : std_logic;
+  signal clk_sysclk625k : std_logic;
+  signal clk_sysclk2p5 : std_logic;
   signal clk_sysclk10 : std_logic;
+  signal clk_sysclk20 : std_logic;
   signal clk_sysclk40 : std_logic;
   signal clk_sysclk80 : std_logic;
   signal clk_cmsclk : std_logic;
@@ -335,7 +352,10 @@ begin
       mgtrefclk1_226 => mgtrefclk1_226,
       mgtrefclk0_227 => mgtrefclk0_227,
       mgtrefclk1_227 => mgtrefclk1_227,
+      clk_sysclk625k => clk_sysclk625k,
+      clk_sysclk2p5  => clk_sysclk2p5,
       clk_sysclk10   => clk_sysclk10,
+      clk_sysclk20   => clk_sysclk20,
       clk_sysclk40   => clk_sysclk40,
       clk_sysclk80   => clk_sysclk80,
       clk_cmsclk     => clk_cmsclk,
