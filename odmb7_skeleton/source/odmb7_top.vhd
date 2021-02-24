@@ -89,6 +89,8 @@ entity odmb7_top is
     LVMB_CSB     : out std_logic_vector(6 downto 0);
     LVMB_SCLK    : out std_logic;
     LVMB_SDIN    : out std_logic;
+    LVMB_SDOUT_P : in  std_logic;                         -- C_LVMB_SDOUT_P in Bank 67
+    LVMB_SDOUT_N : in  std_logic;                         -- C_LVMB_SDOUT_N in Bank 67
 
     --------------------------------
     -- OTMB communication signals
