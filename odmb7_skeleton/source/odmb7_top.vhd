@@ -79,18 +79,40 @@ entity odmb7_top is
     L1A_MATCH_N    : out std_logic_vector(NCFEB downto 1); -- Bank 66, ODMB CTRL
     PPIB_OUT_EN_B  : out std_logic;                        -- Bank 68
 
+    --------------------
+    -- CCB Signals
+    --------------------
+    CCB_CMD        : in  std_logic_vector(5 downto 0);     -- Bank 44
+    CCB_CMD_S      : in  std_logic;                        -- Bank 46
+    CCB_DATA       : in  std_logic_vector(7 downto 0);     -- Bank 44
+    CCB_DATA_S     : in  std_logic;                        -- Bank 46
+    CCB_CAL        : in  std_logic_vector(2 downto 0);     -- Bank 44
+    CCB_CRSV       : in  std_logic_vector(3 downto 0);     -- Bank 44
+    CCB_DRSV       : in  std_logic_vector(1 downto 0);     -- Bank 45
+    CCB_RSVO       : in  std_logic_vector(4 downto 0);     -- Bank 45
+    CCB_RSVI       : out std_logic_vector(2 downto 0);     -- Bank 45
+    CCB_BX0_B      : in  std_logic;                        -- Bank 46
+    CCB_BX_RST_B   : in  std_logic;                        -- Bank 46
+    CCB_L1A_RST_B  : in  std_logic;                        -- Bank 46
+    CCB_L1A_B      : in  std_logic;                        -- Bank 46
+    CCB_L1A_RLS    : out std_logic;                        -- Bank 45
+    CCB_CLKEN      : in  std_logic;                        -- Bank 46
+    CCB_EVCNTRES_B : in  std_logic;                        -- Bank 46
+    CCB_HARDRST_B  : in  std_logic;                        -- Bank 45
+    CCB_SOFT_RST   : in  std_logic;                        -- Bank 45
+
     --------------------------------
     -- LVMB control/monitor signals
     --------------------------------
-    LVMB_PON     : out std_logic_vector(7 downto 0);
-    PON_LOAD_B   : out std_logic;
-    PON_OE       : out std_logic;
-    MON_LVMB_PON : in  std_logic_vector(7 downto 0);
-    LVMB_CSB     : out std_logic_vector(6 downto 0);
-    LVMB_SCLK    : out std_logic;
-    LVMB_SDIN    : out std_logic;
-    LVMB_SDOUT_P : in  std_logic;                         -- C_LVMB_SDOUT_P in Bank 67
-    LVMB_SDOUT_N : in  std_logic;                         -- C_LVMB_SDOUT_N in Bank 67
+    LVMB_PON     : out std_logic_vector(7 downto 0);       -- Bank 67
+    PON_LOAD_B   : out std_logic;                          -- Bank 67
+    PON_OE       : out std_logic;                          -- Bank 67
+    MON_LVMB_PON : in  std_logic_vector(7 downto 0);       -- Bank 67
+    LVMB_CSB     : out std_logic_vector(6 downto 0);       -- Bank 67
+    LVMB_SCLK    : out std_logic;                          -- Bank 68
+    LVMB_SDIN    : out std_logic;                          -- Bank 68
+    LVMB_SDOUT_P : in std_logic;                           -- C_LVMB_SDOUT_P in Bank 67
+    LVMB_SDOUT_N : in std_logic;                           -- C_LVMB_SDOUT_N in Bank 67 --meta:uncomment_for_odmb
 
     --------------------------------
     -- OTMB communication signals

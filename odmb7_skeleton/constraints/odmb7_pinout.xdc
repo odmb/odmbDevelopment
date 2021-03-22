@@ -4,9 +4,11 @@
 # Outline/section title:
 # - Clock pins
 # - Selector/monitor pins unclassified yet
-# - VME pins
+# - VME control pins
 # - DCFEB JTAG/control pins
+# - CCB communication pins
 # - LVMB control/monitor pins
+# - TMB communication pins
 # - Optical TX/RX pins
 # - Optical control pins
 # - SYSMON pins
@@ -60,16 +62,12 @@ set_property PACKAGE_PIN     T23        [get_ports FPGA_SEL]
 set_property IOSTANDARD      LVCMOS18   [get_ports FPGA_SEL]
 set_property PACKAGE_PIN     W29        [get_ports RST_CLKS_B]
 set_property IOSTANDARD      LVCMOS18   [get_ports RST_CLKS_B]
-set_property PACKAGE_PIN     AN14       [get_ports CCB_HARDRST_B]
-set_property IOSTANDARD      LVCMOS18   [get_ports CCB_HARDRST_B]
-set_property PACKAGE_PIN     AP14       [get_ports CCB_SOFT_RST]
-set_property IOSTANDARD      LVCMOS18   [get_ports CCB_SOFT_RST]
 set_property PACKAGE_PIN     L9         [get_ports ODMB_DONE]
 set_property IOSTANDARD      LVCMOS18   [get_ports ODMB_DONE]
 
 
 # ----------------------------------------------------------------------------------------------------------------------
-# VME pins
+# VME control pins
 # ----------------------------------------------------------------------------------------------------------------------
 set_property package_pin     V31        [get_ports VME_DATA[0]]
 set_property IOSTANDARD      LVCMOS18   [get_ports VME_DATA[0]]
@@ -355,6 +353,94 @@ set_property PACKAGE_PIN     E11        [get_ports L1A_MATCH_P[7]]
 set_property IOSTANDARD      LVDS       [get_ports L1A_MATCH_P[7]]
 set_property PACKAGE_PIN     D11        [get_ports L1A_MATCH_N[7]]
 set_property IOSTANDARD      LVDS       [get_ports L1A_MATCH_N[7]]
+
+# ----------------------------------------------------------------------------------------------------------------------
+# CCB communication pins
+# ----------------------------------------------------------------------------------------------------------------------
+set_property PACKAGE_PIN     AP24       [get_ports CCB_CMD[0]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_CMD[0]]
+set_property PACKAGE_PIN     AP25       [get_ports CCB_CMD[1]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_CMD[1]]
+set_property PACKAGE_PIN     AP20       [get_ports CCB_CMD[2]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_CMD[2]]
+set_property PACKAGE_PIN     AP21       [get_ports CCB_CMD[3]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_CMD[3]]
+set_property PACKAGE_PIN     AM24       [get_ports CCB_CMD[4]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_CMD[4]]
+set_property PACKAGE_PIN     AN24       [get_ports CCB_CMD[5]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_CMD[5]]
+set_property PACKAGE_PIN     AP31       [get_ports CCB_CMD_S]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_CMD_S]
+set_property PACKAGE_PIN     AM22       [get_ports CCB_DATA[0]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_DATA[0]]
+set_property PACKAGE_PIN     AN22       [get_ports CCB_DATA[1]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_DATA[1]]
+set_property PACKAGE_PIN     AM21       [get_ports CCB_DATA[2]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_DATA[2]]
+set_property PACKAGE_PIN     AN21       [get_ports CCB_DATA[3]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_DATA[3]]
+set_property PACKAGE_PIN     AL24       [get_ports CCB_DATA[4]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_DATA[4]]
+set_property PACKAGE_PIN     AL25       [get_ports CCB_DATA[5]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_DATA[5]]
+set_property PACKAGE_PIN     AL22       [get_ports CCB_DATA[6]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_DATA[6]]
+set_property PACKAGE_PIN     AL23       [get_ports CCB_DATA[7]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_DATA[7]]
+set_property PACKAGE_PIN     AP33       [get_ports CCB_DATA_S]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_DATA_S]
+set_property PACKAGE_PIN     AH23       [get_ports CCB_CAL[0]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_CAL[0]]
+set_property PACKAGE_PIN     AF25       [get_ports CCB_CAL[1]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_CAL[1]]
+set_property PACKAGE_PIN     AJ23       [get_ports CCB_CAL[2]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_CAL[2]]
+set_property PACKAGE_PIN     AJ24       [get_ports CCB_CRSV[0]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_CRSV[0]]
+set_property PACKAGE_PIN     AH24       [get_ports CCB_CRSV[1]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_CRSV[1]]
+set_property PACKAGE_PIN     AJ25       [get_ports CCB_CRSV[2]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_CRSV[2]]
+set_property PACKAGE_PIN     AG24       [get_ports CCB_CRSV[3]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_CRSV[3]]
+set_property PACKAGE_PIN     AN19       [get_ports CCB_DRSV[0]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_DRSV[0]]
+set_property PACKAGE_PIN     AP18       [get_ports CCB_DRSV[1]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_DRSV[1]]
+set_property PACKAGE_PIN     AL19       [get_ports CCB_RSVO[0]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_RSVO[0]]
+set_property PACKAGE_PIN     AM19       [get_ports CCB_RSVO[1]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_RSVO[1]]
+set_property PACKAGE_PIN     AJ19       [get_ports CCB_RSVO[2]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_RSVO[2]]
+set_property PACKAGE_PIN     AJ18       [get_ports CCB_RSVO[3]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_RSVO[3]]
+set_property PACKAGE_PIN     AK18       [get_ports CCB_RSVO[4]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_RSVO[4]]
+set_property PACKAGE_PIN     AH17       [get_ports CCB_RSVI[0]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_RSVI[0]]
+set_property PACKAGE_PIN     AH18       [get_ports CCB_RSVI[1]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_RSVI[1]]
+set_property PACKAGE_PIN     AH14       [get_ports CCB_RSVI[2]]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_RSVI[2]]
+set_property PACKAGE_PIN     AN34       [get_ports CCB_BX0_B]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_BX0_B]
+set_property PACKAGE_PIN     AP34       [get_ports CCB_BX_RST_B]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_BX_RST_B]
+set_property PACKAGE_PIN     AN32       [get_ports CCB_L1A_RST_B]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_L1A_RST_B]
+set_property PACKAGE_PIN     AM32       [get_ports CCB_L1A_B]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_L1A_B]
+set_property PACKAGE_PIN     AP19       [get_ports CCB_L1A_RLS]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_L1A_RLS]
+set_property PACKAGE_PIN     AN31       [get_ports CCB_CLKEN]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_CLKEN]
+set_property PACKAGE_PIN     AN33       [get_ports CCB_EVCNTRES_B]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_EVCNTRES_B]
+set_property PACKAGE_PIN     AN14       [get_ports CCB_HARDRST_B]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_HARDRST_B]
+set_property PACKAGE_PIN     AP14       [get_ports CCB_SOFT_RST]
+set_property IOSTANDARD      LVCMOS18   [get_ports CCB_SOFT_RST]
 
 # ----------------------------------------------------------------------------------------------------------------------
 # LVMB control/monitor pins
