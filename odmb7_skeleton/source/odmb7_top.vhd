@@ -83,8 +83,8 @@ entity odmb7_top is
     -- LVMB control/monitor signals
     --------------------------------
     LVMB_PON     : out std_logic_vector(7 downto 0);
-    PON_LOAD     : out std_logic;
-    PON_OE_B     : out std_logic;
+    PON_LOAD_B   : out std_logic;
+    PON_OE       : out std_logic;
     MON_LVMB_PON : in  std_logic_vector(7 downto 0);
     LVMB_CSB     : out std_logic_vector(6 downto 0);
     LVMB_SCLK    : out std_logic;
