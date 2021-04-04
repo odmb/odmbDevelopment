@@ -184,8 +184,6 @@ entity odmb7_top is
     KUS_DL_SEL    : out std_logic;  -- Bank 47, ODMB JTAG path select
     FPGA_SEL      : out std_logic;  -- Bank 47, clock synthesizaer control input select
     RST_CLKS_B    : out std_logic;  -- Bank 47, clock synthesizaer reset
-    CCB_HARDRST_B : in std_logic;   -- Bank 45
-    CCB_SOFT_RST  : in std_logic;   -- Bank 45
     ODMB_DONE     : in std_logic;   -- "DONE" in bank 66, monitor of the DONE from Bank 0
 
     --------------------------------
@@ -212,7 +210,7 @@ end odmb7_top;
 
 architecture odmb_inst of odmb7_top is
 
-  component odmb7_clocking is
+  component odmb75_clocking is
     port (
       -- Input ports
       CMS_CLK_FPGA_P : in std_logic;    -- system clock: 40.07897 MHz
@@ -348,7 +346,7 @@ begin
   -------------------------------------------------------------------------------------------
   -- Handle ODMB7 clocks
   -------------------------------------------------------------------------------------------
-  u_clocking : odmb7_clocking
+  u_clocking : odmb75_clocking
     port map (
       CMS_CLK_FPGA_P => CMS_CLK_FPGA_P,
       CMS_CLK_FPGA_N => CMS_CLK_FPGA_N,

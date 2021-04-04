@@ -6,7 +6,7 @@ use ieee.std_logic_misc.all;
 library unisim;
 use unisim.vcomponents.all;
 
-entity odmb7_clocking is
+entity odmb75_clocking is
   port (
     --------------------
     -- Input ports
@@ -62,9 +62,9 @@ entity odmb7_clocking is
     clk_mgtclk125 : out std_logic
 
     );
-end odmb7_clocking;
+end odmb75_clocking;
 
-architecture Behavioral of odmb7_clocking is
+architecture Behavioral of odmb75_clocking is
 
   component clockManager is
     port (
