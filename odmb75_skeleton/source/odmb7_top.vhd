@@ -56,6 +56,9 @@ entity odmb7_top is
     KUS_VME_DIR     : out std_logic;                       -- Bank 44
     VME_DTACK_KUS_B : out std_logic;                       -- Bank 44
 
+    --------------------
+    -- DCFEB copper communications
+    --------------------
     DCFEB_TCK_P    : out std_logic_vector(NCFEB downto 1); -- Bank 68
     DCFEB_TCK_N    : out std_logic_vector(NCFEB downto 1); -- Bank 68
     DCFEB_TMS_P    : out std_logic;                        -- Bank 68
@@ -78,6 +81,7 @@ entity odmb7_top is
     L1A_MATCH_P    : out std_logic_vector(NCFEB downto 1); -- Bank 66, ODMB CTRL
     L1A_MATCH_N    : out std_logic_vector(NCFEB downto 1); -- Bank 66, ODMB CTRL
     PPIB_OUT_EN_B  : out std_logic;                        -- Bank 68
+    DCFEB_REPROG_B : out std_logic;                        -- Bank 68
 
     --------------------
     -- CCB Signals
@@ -328,6 +332,7 @@ begin
   FPGA_SEL <= '0';
   RST_CLKS_B <= '1';
   PPIB_OUT_EN_B <= '0';
+  DCFEB_REPROG_B <= '0';
 
   -------------------------------------------------------------------------------------------
   -- Constant driver for firefly selector/reset pins
